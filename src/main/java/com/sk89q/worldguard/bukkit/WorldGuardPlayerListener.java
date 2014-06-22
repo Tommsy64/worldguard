@@ -802,7 +802,7 @@ public class WorldGuardPlayerListener implements Listener {
                         && !placedInSet.canBuild(localPlayer)) {
                     // note that normal block placement is handled later, this is just a workaround
                     // for the location of the top block of the door
-                    player.sendMessage(ChatColor.DARK_RED + "You don't have permission for this area.");
+                    // player.sendMessage(ChatColor.DARK_RED + "You don't have permission for this area.");
                     event.setCancelled(true);
                     return;
                 }
@@ -814,7 +814,7 @@ public class WorldGuardPlayerListener implements Listener {
                         && !placedInSet.allows(DefaultFlag.LIGHTER)) {
                     event.setCancelled(true);
                     event.setUseItemInHand(Result.DENY);
-                    player.sendMessage(ChatColor.DARK_RED + "You're not allowed to use that here.");
+                    // player.sendMessage(ChatColor.DARK_RED + "You're not allowed to use that here.");
                     return;
                 }
             }
@@ -824,7 +824,7 @@ public class WorldGuardPlayerListener implements Listener {
                         && !set.canBuild(localPlayer)) {
                     event.setCancelled(true);
                     event.setUseItemInHand(Result.DENY);
-                    player.sendMessage(ChatColor.DARK_RED + "You're not allowed to use that here.");
+                    // player.sendMessage(ChatColor.DARK_RED + "You're not allowed to use that here.");
                     return;
                 }
             }
